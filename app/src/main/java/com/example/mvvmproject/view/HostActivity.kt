@@ -24,6 +24,6 @@ class HostActivity : AppCompatActivity() {
     }
 
     private fun setFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.frame_container, fragment).addToBackStack(null).commit()
     }
 }

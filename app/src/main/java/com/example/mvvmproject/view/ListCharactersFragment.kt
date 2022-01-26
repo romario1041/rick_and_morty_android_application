@@ -38,9 +38,6 @@ class ListCharactersFragment : Fragment() {
     private val adapter: SampleAdapter by lazy {
         SampleAdapter(mutableListOf(), ::getResultClicked)
     }
-    private val layoutManager: StaggeredGridLayoutManager by lazy {
-        StaggeredGridLayoutManager(spanCount, orientation)
-    }
     private val repository by lazy {
         DomainImpl()
     }
@@ -78,7 +75,6 @@ class ListCharactersFragment : Fragment() {
     }
 
     private fun configureRecyclerView() {
-        characterRecyclerView.layoutManager = layoutManager
         characterRecyclerView.adapter = adapter
     }
 
